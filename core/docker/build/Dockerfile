@@ -6,8 +6,8 @@ RUN mkdir -p /var/www/etc
 RUN mkdir -p /var/www/plugins
 
 # Rewrite rules
-COPY core/docker/build/rewrite.config /usr/local/tomcat/conf/Catalina/127.0.0.1/
-COPY core/docker/build/urlrewrite.xml /var/www/etc/urlrewrite.xml
+COPY ./core/docker/build/rewrite.config /usr/local/tomcat/conf/Catalina/127.0.0.1/
+COPY ./core/docker/build/urlrewrite.xml /var/www/etc/urlrewrite.xml
 
 # Logs
 RUN ln -sf /dev/stdout /opt/lucee/web/logs/application.log
